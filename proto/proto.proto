@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package Proto;
+
+option go_package = "./Proto";
+
+
+service Incrementer {
+    rpc Increment(Empty) returns (Value);
+}
+
+message Empty{
+
+}
+
+message Value {
+    int64 currentNumber = 1; 
+}
